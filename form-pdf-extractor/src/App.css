@@ -110,7 +110,7 @@
 .result table {
   border-collapse: collapse;
   width: 100%;
-  min-width: 1180px;
+  min-width: 1020px;
   font-size: 13px;
   line-height: 1.45;
 }
@@ -120,14 +120,14 @@
   font-weight: 700;
   font-size: 13px;
   color: #111827;
-  padding: 10px 12px;
+  padding: 10px 8px;
   border-bottom: 2px solid #e5e7eb;
   vertical-align: top;
   white-space: nowrap;
 }
 
 .result td {
-  padding: 14px 12px;
+  padding: 9px 8px;
   border-right: 1px solid #f0f0f0;
   vertical-align: top;
 }
@@ -160,12 +160,12 @@
 .btn-stack {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 5px;
 }
 
 .pill {
   display: inline-block;
-  padding: 8px 12px;
+  padding: 5px 10px;
   font-size: 13px;
   font-weight: 600;
   color: #fff;
@@ -195,7 +195,7 @@
 /* Yardım */
 .help {
   color: #4b5563;
-  max-width: 220px;
+  max-width: 180px;
 }
 
 /* Başvuru Bilgileri */
@@ -222,7 +222,7 @@
 
 .status {
   color: #7a3ea8;
-  margin-top: 6px;
+  margin-top: 3px;
 }
 
 .status b {

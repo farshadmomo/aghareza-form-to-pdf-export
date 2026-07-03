@@ -1,0 +1,30 @@
+- generic [ref=e4]:
+  - heading "Ön İzin Başvurusu" [level=1] [ref=e5]
+  - paragraph [ref=e6]: İşçi bilgilerini girin ve başvuru belgesini oluşturun.
+  - generic [ref=e7]:
+    - generic [ref=e8]: Ad Soyad
+    - textbox "Ad Soyad" [ref=e9]:
+      - /placeholder: HAZRAT ALI
+  - generic [ref=e10]:
+    - generic [ref=e11]: Pasaport No
+    - textbox "Pasaport No" [ref=e12]:
+      - /placeholder: VR1843471
+  - generic [ref=e13]:
+    - generic [ref=e14]: Adres / Doğum Yeri
+    - textbox "Adres / Doğum Yeri" [ref=e15]:
+      - /placeholder: PESHAWAR
+  - generic [ref=e16]:
+    - generic [ref=e17]: Doğum Tarihi
+    - textbox "Doğum Tarihi" [ref=e18]
+  - generic [ref=e19]:
+    - generic [ref=e20]: Saat
+    - textbox "Saat" [ref=e21]
+  - generic [ref=e22]:
+    - generic [ref=e23]: Telefon No
+    - textbox "Telefon No" [ref=e24]:
+      - /placeholder: "00905488334561"
+  - generic [ref=e25]:
+    - generic [ref=e26]: Ülke
+    - textbox "Ülke" [ref=e27]:
+      - /placeholder: PAKİSTAN
+  - button "Başvuru Oluştur" [ref=e28] [cursor=pointer]
