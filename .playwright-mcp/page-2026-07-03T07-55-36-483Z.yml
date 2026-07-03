@@ -1,0 +1,73 @@
+- generic [ref=e3]:
+  - generic [ref=e29]:
+    - button "PDF olarak indir" [ref=e30] [cursor=pointer]
+    - button "Yeni Başvuru" [ref=e31] [cursor=pointer]
+  - table [ref=e33]:
+    - rowgroup [ref=e34]:
+      - row "İşlem Bilgi/Aksiyon Düğmeleri Yardım Başvuru Bilgileri Bağlı İşyeri Basım İşlemleri Vekalet Bilgileri İşveren Bilgileri İşçi Bilgileri" [ref=e35]:
+        - columnheader "İşlem" [ref=e36]
+        - columnheader "Bilgi/Aksiyon Düğmeleri" [ref=e37]
+        - columnheader "Yardım" [ref=e38]
+        - columnheader "Başvuru Bilgileri" [ref=e39]
+        - columnheader "Bağlı İşyeri" [ref=e40]
+        - columnheader "Basım İşlemleri" [ref=e41]
+        - columnheader "Vekalet Bilgileri" [ref=e42]
+        - columnheader "İşveren Bilgileri" [ref=e43]
+        - columnheader "İşçi Bilgileri" [ref=e44]
+    - rowgroup [ref=e45]:
+      - 'row "820304/2026 PESHAWAR ⊕ ⋯ ✎ 🧭 Başvuru Takibi 📲 SMS 🖨️ Yazdırma 🧾 Harç 🖼️ Süreç Görseli 🔄 Çevirme Bilgileri ➕ Sağlık İşlemleri 🔁 Akit''e Çevir 💳 Ödeme Yap Başvurunuz Kurum tarafından kontrol ediliyor. Ret durumunda lütfen belirtilen hataları düzeltip Kurum''a tekrar gönderme işlemi yapınız. Ön İzin Başvurusu 820304/2026 3 Temmuz 2026 11:25 Kontrol: BEKLEMEDE Amir Kontrol: BEKLEMEDE Mühür İzni: BEKLEMEDE OSMAN OGULLARI INSAAT LTD. GM-18232 📈 Ön izin Tarihleri 📄 Ön İzin Belgesi Basımı 📄 Çalışma İzni Belgesi 📄 Takip Dokümanı Ad Soyad: Kimlik No: V.Başlangıç: V.Bitiş: Ünvan İsim: Kimlik No: HAZRAT ALI VR1843471 PESHAWAR/1.01.1992 00:00:00 00905488334561 PAKİSTAN" [ref=e46]':
+        - cell "820304/2026 PESHAWAR ⊕ ⋯ ✎ 🧭 Başvuru Takibi" [ref=e47]:
+          - generic [ref=e48]: 820304/2026
+          - generic [ref=e49]: PESHAWAR
+          - generic [ref=e50]: ⊕ ⋯ ✎
+          - button "🧭 Başvuru Takibi" [ref=e51] [cursor=pointer]
+        - cell "📲 SMS 🖨️ Yazdırma 🧾 Harç 🖼️ Süreç Görseli 🔄 Çevirme Bilgileri ➕ Sağlık İşlemleri 🔁 Akit'e Çevir 💳 Ödeme Yap" [ref=e52]:
+          - generic [ref=e53]:
+            - button "📲 SMS" [ref=e54] [cursor=pointer]
+            - button "🖨️ Yazdırma" [ref=e55] [cursor=pointer]
+            - button "🧾 Harç" [ref=e56] [cursor=pointer]
+            - button "🖼️ Süreç Görseli" [ref=e57] [cursor=pointer]
+            - button "🔄 Çevirme Bilgileri" [ref=e58] [cursor=pointer]
+            - button "➕ Sağlık İşlemleri" [ref=e59] [cursor=pointer]
+            - button "🔁 Akit'e Çevir" [ref=e60] [cursor=pointer]
+            - button "💳 Ödeme Yap" [ref=e61] [cursor=pointer]
+        - cell "Başvurunuz Kurum tarafından kontrol ediliyor. Ret durumunda lütfen belirtilen hataları düzeltip Kurum'a tekrar gönderme işlemi yapınız." [ref=e62]
+        - 'cell "Ön İzin Başvurusu 820304/2026 3 Temmuz 2026 11:25 Kontrol: BEKLEMEDE Amir Kontrol: BEKLEMEDE Mühür İzni: BEKLEMEDE" [ref=e63]':
+          - generic [ref=e64]:
+            - text: Ön İzin
+            - text: Başvurusu
+          - generic [ref=e65]: 820304/2026
+          - generic [ref=e66]: 3 Temmuz 2026 11:25
+          - generic [ref=e67]: "Kontrol: BEKLEMEDE"
+          - generic [ref=e68]:
+            - text: "Amir Kontrol:"
+            - text: BEKLEMEDE
+          - generic [ref=e69]:
+            - text: "Mühür İzni:"
+            - text: BEKLEMEDE
+        - cell "OSMAN OGULLARI INSAAT LTD. GM-18232" [ref=e70]:
+          - text: OSMAN OGULLARI INSAAT LTD.
+          - text: GM-18232
+        - cell "📈 Ön izin Tarihleri 📄 Ön İzin Belgesi Basımı 📄 Çalışma İzni Belgesi 📄 Takip Dokümanı" [ref=e71]:
+          - generic [ref=e72]:
+            - button "📈 Ön izin Tarihleri" [ref=e73] [cursor=pointer]
+            - button "📄 Ön İzin Belgesi Basımı" [ref=e74] [cursor=pointer]
+            - button "📄 Çalışma İzni Belgesi" [ref=e75] [cursor=pointer]
+            - button "📄 Takip Dokümanı" [ref=e76] [cursor=pointer]
+        - 'cell "Ad Soyad: Kimlik No: V.Başlangıç: V.Bitiş:" [ref=e77]':
+          - text: "Ad Soyad:"
+          - text: "Kimlik No:"
+          - text: "V.Başlangıç:"
+          - text: "V.Bitiş:"
+        - 'cell "Ünvan İsim: Kimlik No:" [ref=e78]':
+          - text: Ünvan
+          - text: "İsim:"
+          - text: Kimlik
+          - text: "No:"
+        - cell "HAZRAT ALI VR1843471 PESHAWAR/1.01.1992 00:00:00 00905488334561 PAKİSTAN" [ref=e79]:
+          - generic [ref=e80]: HAZRAT ALI
+          - generic [ref=e81]: VR1843471
+          - generic [ref=e82]: PESHAWAR/1.01.1992
+          - generic [ref=e83]: 00:00:00
+          - generic [ref=e84]: "00905488334561"
+          - generic [ref=e85]: PAKİSTAN

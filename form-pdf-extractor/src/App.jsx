@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { formatDob, formatAppDate, makeAppNo } from './format'
 import './App.css'
 
@@ -36,6 +36,33 @@ function App() {
   const [form, setForm] = useState(EMPTY)
   const [submitted, setSubmitted] = useState(false)
   const [meta, setMeta] = useState({ appNo: '', appDate: '' })
+  const resultRef = useRef(null)
+
+  // Capture the result exactly as rendered on screen into a single-page PDF.
+  // Direct html2canvas + jsPDF: page is sized to the canvas, so no pagination.
+  const downloadPdf = async () => {
+    const [{ default: html2canvas }, { jsPDF }] = await Promise.all([
+      import('html2canvas'),
+      import('jspdf'),
+    ])
+    const el = resultRef.current
+    const canvas = await html2canvas(el, {
+      scale: 2,
+      width: el.scrollWidth,
+      windowWidth: el.scrollWidth + 60,
+      backgroundColor: '#ffffff',
+    })
+    const w = canvas.width / 2
+    const h = canvas.height / 2
+    const pdf = new jsPDF({
+      orientation: w > h ? 'landscape' : 'portrait',
+      unit: 'px',
+      format: [w, h],
+      hotfixes: ['px_scaling'],
+    })
+    pdf.addImage(canvas.toDataURL('image/jpeg', 0.95), 'JPEG', 0, 0, w, h)
+    pdf.save('On Izin Basvurusu.pdf')
+  }
 
   const change = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
@@ -83,11 +110,11 @@ function App() {
   return (
     <div className="page">
       <div className="toolbar no-print">
-        <button className="tool-btn primary" onClick={() => window.print()}>PDF olarak indir</button>
+        <button className="tool-btn primary" onClick={downloadPdf}>PDF olarak indir</button>
         <button className="tool-btn" onClick={() => setSubmitted(false)}>Yeni Başvuru</button>
       </div>
 
-      <div className="result">
+      <div className="result" ref={resultRef}>
         <table>
           <thead>
             <tr>
@@ -109,7 +136,7 @@ function App() {
                 <div className="app-link">{meta.appNo}</div>
                 <div className="city">{form.address || 'GAZİMAĞUSA'}</div>
                 <div className="row-icons">⊕ &nbsp; ⋯ &nbsp; ✎</div>
-                <button type="button" className="pill blue">🧭 Başvuru Takibi</button>
+                <button type="button" className="pill indigo">🧭 Başvuru Takibi</button>
               </td>
 
               {/* Bilgi/Aksiyon Düğmeleri */}
@@ -139,7 +166,7 @@ function App() {
 
               {/* Bağlı İşyeri */}
               <td className="workplace">
-                <b>ALPHARE SEARCH CONSULTANT LTD.</b>
+                <b>OSMAN OGULLARI INSAAT LTD.</b>
                 <br />
                 <b>GM-18232</b>
               </td>

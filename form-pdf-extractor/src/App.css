@@ -177,15 +177,19 @@
 }
 
 .pill.green {
-  background: #2fae8f;
+  background: #26b99a;
 }
 
 .pill.orange {
-  background: #f0a742;
+  background: #f4a63a;
 }
 
 .pill.blue {
-  background: #3a9bdc;
+  background: #38a5ea;
+}
+
+.pill.indigo {
+  background: #635dc9;
 }
 
 /* Yardım */
