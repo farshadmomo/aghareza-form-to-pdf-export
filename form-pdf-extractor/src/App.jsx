@@ -1,5 +1,17 @@
 import { useRef, useState } from 'react'
 import { formatDob, formatAppDate, makeAppNo } from './format'
+import iconSms from './assets/icons/sms.png'
+import iconYazdirma from './assets/icons/yazdirma.png'
+import iconHarc from './assets/icons/harc.png'
+import iconSurec from './assets/icons/surec.png'
+import iconCevirme from './assets/icons/cevirme.png'
+import iconSaglik from './assets/icons/saglik.png'
+import iconAkit from './assets/icons/akit.png'
+import iconOdeme from './assets/icons/odeme.png'
+import iconTarihleri from './assets/icons/tarihleri.png'
+import iconBasim from './assets/icons/basim.png'
+import iconCalisma from './assets/icons/calisma.png'
+import iconTakip from './assets/icons/takip.png'
 import './App.css'
 
 const FIELDS = [
@@ -13,21 +25,21 @@ const FIELDS = [
 ]
 
 const INFO_BUTTONS = [
-  { label: '📲 SMS', color: 'green' },
-  { label: '🖨️ Yazdırma', color: 'green' },
-  { label: '🧾 Harç', color: 'green' },
-  { label: '🖼️ Süreç Görseli', color: 'green' },
-  { label: '🔄 Çevirme Bilgileri', color: 'green' },
-  { label: '➕ Sağlık İşlemleri', color: 'orange' },
-  { label: "🔁 Akit'e Çevir", color: 'orange' },
-  { label: '💳 Ödeme Yap', color: 'orange' },
+  { label: 'SMS', color: 'green', icon: iconSms },
+  { label: 'Yazdırma', color: 'green', icon: iconYazdirma },
+  { label: 'Harç', color: 'green', icon: iconHarc },
+  { label: 'Süreç Görseli', color: 'green', icon: iconSurec },
+  { label: 'Çevirme Bilgileri', color: 'green', icon: iconCevirme },
+  { label: 'Sağlık İşlemleri', color: 'orange', icon: iconSaglik },
+  { label: "Akit'e Çevir", color: 'orange', icon: iconAkit },
+  { label: 'Ödeme Yap', color: 'orange', icon: iconOdeme },
 ]
 
 const PRINT_BUTTONS = [
-  { label: '📈 Ön izin Tarihleri', color: 'green' },
-  { label: '📄 Ön İzin Belgesi Basımı', color: 'blue' },
-  { label: '📄 Çalışma İzni Belgesi', color: 'blue' },
-  { label: '📄 Takip Dokümanı', color: 'blue' },
+  { label: 'Ön izin Tarihleri', color: 'green', icon: iconTarihleri },
+  { label: 'Ön İzin Belgesi Basımı', color: 'blue', icon: iconBasim },
+  { label: 'Çalışma İzni Belgesi', color: 'blue', icon: iconCalisma },
+  { label: 'Takip Dokümanı', color: 'blue', icon: iconTakip },
 ]
 
 const EMPTY = { name: '', passport: '', address: '', dob: '', hour: '', phone: '', country: '' }
@@ -143,7 +155,10 @@ function App() {
               <td>
                 <div className="btn-stack">
                   {INFO_BUTTONS.map((b) => (
-                    <button type="button" key={b.label} className={`pill ${b.color}`}>{b.label}</button>
+                    <button type="button" key={b.label} className={`pill ${b.color}`}>
+                      <img src={b.icon} alt="" className="pill-icon" />
+                      {b.label}
+                    </button>
                   ))}
                 </div>
               </td>
@@ -175,7 +190,10 @@ function App() {
               <td>
                 <div className="btn-stack">
                   {PRINT_BUTTONS.map((b) => (
-                    <button type="button" key={b.label} className={`pill ${b.color}`}>{b.label}</button>
+                    <button type="button" key={b.label} className={`pill ${b.color}`}>
+                      <img src={b.icon} alt="" className="pill-icon" />
+                      {b.label}
+                    </button>
                   ))}
                 </div>
               </td>

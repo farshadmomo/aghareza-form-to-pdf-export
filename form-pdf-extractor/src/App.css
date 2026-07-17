@@ -160,12 +160,16 @@
 .btn-stack {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  align-items: flex-start;
+  gap: 7px;
 }
 
 .pill {
-  display: inline-block;
-  padding: 5px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  padding: 9px 14px;
   font-size: 13px;
   font-weight: 600;
   color: #fff;
@@ -176,20 +180,32 @@
   white-space: nowrap;
 }
 
+.pill-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
 .pill.green {
-  background: #26b99a;
+  background: #3eb8a1;
+  color: #fff;
 }
 
 .pill.orange {
-  background: #f4a63a;
+  background: #fbb529;
+  color: #000;
 }
 
 .pill.blue {
-  background: #38a5ea;
+  background: #43a3ef;
+  color: #fff;
 }
 
 .pill.indigo {
   background: #635dc9;
+  color: #fff;
 }
 
 /* Yardım */
